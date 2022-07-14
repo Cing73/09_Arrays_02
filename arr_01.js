@@ -2,11 +2,25 @@
 
 // push() / pop()
 // push --> Daten rein ... (+)
+// let arr = [];
+// output(arr);
+// arr.push("Ich");
+// output(arr);
+// arr.push("bin");
+// output(arr);
+// arr.push("Max");
+// output(arr);
 
+// output(arr[arr.length-1]);
 
 // pop() --> Daten raus ... (-)
 
-
+// output(arr.pop());
+// output(arr);
+// output(arr.pop());
+// output(arr);
+// output(arr.pop());
+// output(arr);
 
 /*
 Aufgabe:
@@ -34,7 +48,9 @@ function getHTML() {
     let htmlStr = "";
 
     for (let i = 0; i < tags.length; i++) {
-        if (isOpenElement(tags[i])) { 
+        if (isOpenElement(tags[i])) 
+        // if(false)
+        { 
             htmlStr += getElement(tags[i],"open");
         } else {
             htmlStr += getElement(tags[i],"close");
@@ -47,15 +63,15 @@ function getHTML() {
 function isOpenElement(tag) {
     
     // tag liegt nicht oben! --> neu, open
-    let cond = (tag != stack[stack.length-1])  
+    let cond = (tag != stack[stack.length-1]); 
     
     if (cond) {  // open
         stack.push(tag);
-        // output(stack);
+        output(stack);
         return true;
     } else {  // close
         stack.pop();
-        // output(stack);
+        output(stack);
         return false;
     }
      
